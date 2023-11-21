@@ -31,9 +31,9 @@ semantic_models:
       - name: total_revenue
         agg: sum
         expr: product_cost
-      - name: total_customers
+      - name: total_products
         agg: count_distinct
-        expr: customer_id
+        expr: product_id
 
   - name: dim_locations
     description: |
@@ -55,3 +55,20 @@ semantic_models:
       - name: country_code
         type: categorical
         expr: country_code
+
+  - name: dim_products
+    description: |
+      Product details
+    #The name of the dbt model and schema
+    model: ref('dim_products')
+    
+    entities:
+    - name: product
+      type: primary
+      expr: id
+
+    dimensions:
+      - name: product_name
+        description: Product Name
+        type: categorical
+        expr: product_name
