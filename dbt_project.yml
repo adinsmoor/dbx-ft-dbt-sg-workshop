@@ -38,8 +38,15 @@ models:
     
     gold:
       +tags: gold
+    
     silver:
       +tags: silver
+      # Applies to all files under models/example/
+      staging:
+          +materialized: view
+          tpch:
+              # Ref: https://community.databricks.com/s/question/0D58Y00009Z2wPsSAJ/creating-a-persistent-view-that-references-both-unity-catalog-and-hive-metastore-objects-is-not-supported-in-unity-catalog
+              +materialized: table
 
 snapshots:
   +target_schema: snapshots

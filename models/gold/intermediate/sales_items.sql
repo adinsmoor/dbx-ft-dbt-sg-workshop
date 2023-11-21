@@ -13,6 +13,7 @@ with itemised_records as (
 all_records as (
   select
     id || "-" || cast(pos as string) as id,
+    order_time,
     id as sale_id,
     store_id,
     pos as item_number,
