@@ -1,0 +1,15 @@
+version: 2
+
+metrics:
+  - name: total_revenue
+    description: Sum of sales
+    type: simple
+    label: Total Revenue
+    type_params:
+      measure: total_revenue
+  - name: sales_in_last_7_days
+    type: cumulative
+    label: Sales in Last 7 Days
+    type_params:
+      measure: total_revenue
+      window: 7 days
