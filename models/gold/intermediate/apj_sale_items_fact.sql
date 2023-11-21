@@ -20,6 +20,7 @@ sales_items as (
 final as (
     Select 
         sales_items.sale_id, 
+        sales_items.order_time,
         sales_items.product_id, 
         sales_items.store_id, 
         sales_items.product_size, 
