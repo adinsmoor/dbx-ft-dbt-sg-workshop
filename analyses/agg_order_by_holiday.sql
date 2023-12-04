@@ -14,7 +14,7 @@ sales_by_holiday as (
         , sum(sales_items.product_cost) as total_sales
     from sg_holidays
     inner join sales_items 
-    on sales_items.order_date = sg_holidays.date_day
+    on sales_items.order_time = sg_holidays.date_day
     group by 1, 2 
     order by 2
 
