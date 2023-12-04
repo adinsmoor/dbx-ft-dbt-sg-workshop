@@ -12,7 +12,7 @@ metrics:
     type: simple
     label: Unique Producst
     type_params:
-      measure: distinct_products
+      measure: total_products
   - name: total_locations
     description: Unique Store IDs
     type: simple
