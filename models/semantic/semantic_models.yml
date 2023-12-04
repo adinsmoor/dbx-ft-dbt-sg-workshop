@@ -34,6 +34,9 @@ semantic_models:
       - name: total_products
         agg: count_distinct
         expr: product_id
+      - name: total_locations
+        agg: count_distinct
+        expr: store_id
 
   - name: dim_locations
     description: |
