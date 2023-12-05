@@ -2,7 +2,7 @@
 with records as (
     select
         saleID as id,
-        from_unixtime(ts) as order_time,
+        cast(from_unixtime(ts) as date) as order_time,
         Location as store_id,
         CustomerID as customer_id,
         location || "-" || cast(CustomerID as string) as unique_customer_id,
