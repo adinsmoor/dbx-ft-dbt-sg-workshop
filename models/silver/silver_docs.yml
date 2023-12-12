@@ -1,9 +1,19 @@
 version: 2
 
 models:
-    - name: dim_locations
-      description: store locations further classified by country
-      columns:
-        - name: id
-          tests:
-            - not_null
+  - name: dim_locations
+    description: store locations further classified by country
+    columns:
+      - name: id
+        tests:
+          - not_null
+
+  - name: dim_customers
+    description: customer details with email address
+    columns:
+      - name: id
+        tests:
+          - not_null
+      - name: unique_id
+        tests:
+          - not_null
